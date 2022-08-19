@@ -1,0 +1,1 @@
+console.log("Bienvenue à bord de l'Arche jeune matelot!");

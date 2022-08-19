@@ -1,0 +1,40 @@
+@import"https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap";
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Be Vietnam', sans-serif;
+    color: #333333;
+    font-size: 16px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:not(#see-my-work, .projet--nav_link):hover {
+        text-decoration: underline dotted #3195CD;
+    }
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+strong {
+    color: rgb(26, 117, 169);
+}

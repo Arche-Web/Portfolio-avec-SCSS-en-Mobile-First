@@ -1,0 +1,73 @@
+@use "./../abstracts/extends" as *;
+
+#projets {
+    @extend %container;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-color: rgb(236, 188, 255);
+    text-align: center;
+    
+    h2 {
+        margin-bottom: 64px;
+    }
+}
+
+#list-of-projet {
+    list-style: none;
+}
+
+.projet {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &:not(:last-of-type) {
+        margin-bottom: 64px;
+    }
+
+    h3 {
+        margin-bottom: 16px;
+        text-align: left;
+    }
+
+    nav {
+        display: flex;
+        gap: 16px;        
+        margin-top: 16px;
+
+        .projet--nav_link {
+            text-decoration: underline solid #333;
+        }
+    }
+}
+
+.projet-content {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgb(233, 233, 233) 0px 0px 2px 2px;
+
+    ul {
+        position: absolute;
+        bottom: 0;
+        right: 0; left: 0;
+        background-color: rgb(86, 36, 208);
+        color: white;
+        text-align: left;
+        padding: 16px 16px 16px 24px;
+
+        h4 {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #list-of-projet {
+        max-width: calc(300px * 2 + 128px);
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+}

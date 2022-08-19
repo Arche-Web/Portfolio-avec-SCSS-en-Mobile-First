@@ -1,0 +1,25 @@
+@use "./../abstracts/extends" as *;
+
+footer {
+    background-color: #FFFFFF;
+    @extend %container;
+    padding-top: 32px;
+    padding-bottom: 64px;
+    text-align: center;
+
+    #logo {
+        justify-content: center;
+    }
+
+    u {
+        display: block;
+    }
+
+    & > *:not(nav) {
+        margin-bottom: 16px;
+    }
+
+    nav a:not(:first-of-type) {
+        margin-left: 8px;
+    }
+}
